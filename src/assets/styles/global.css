@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --default-font-family: Roboto, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+}
