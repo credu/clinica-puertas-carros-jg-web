@@ -1,0 +1,80 @@
+---
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Image } from "astro:assets";
+
+import Photo1 from "../assets/img/gallery/photo1.jpg";
+import Photo2 from "../assets/img/gallery/photo2.jpg";
+import Photo3 from "../assets/img/gallery/photo3.jpg";
+import Photo4 from "../assets/img/gallery/photo4.jpg";
+import Photo5 from "../assets/img/gallery/photo5.jpg";
+---
+
+<!-- Slider main container -->
+<div class="swiper aspect-square bg-black size-full overflow-hidden">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <Image
+                class="size-full object-contain"
+                src={Photo1}
+                alt=""
+                loading="eager"
+            />
+        </div>
+        <div class="swiper-slide">
+            <Image
+                class="size-full object-contain"
+                src={Photo2}
+                alt=""
+                loading="lazy"
+            />
+        </div>
+        <div class="swiper-slide">
+            <Image
+                class="size-full object-contain"
+                src={Photo3}
+                alt=""
+                loading="lazy"
+            />
+        </div>
+        <div class="swiper-slide">
+            <Image
+                class="size-full object-contain"
+                src={Photo4}
+                alt=""
+                loading="lazy"
+            />
+        </div>
+        <div class="swiper-slide">
+            <Image
+                class="size-full object-contain"
+                src={Photo5}
+                alt=""
+                loading="lazy"
+            />
+        </div>
+    </div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<script>
+    import Swiper from "swiper";
+    import { Autoplay, Pagination } from "swiper/modules";
+
+    const swiper = new Swiper(".swiper", {
+        modules: [Autoplay, Pagination],
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
