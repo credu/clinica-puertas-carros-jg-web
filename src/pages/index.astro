@@ -1,36 +1,13 @@
 ---
-import Collection from "../components/Collection.astro";
+import Hero from "../components/Hero.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Inicio">
-    <main class="container mx-auto px-2">
-        <section class="grid grid-cols-2 gap-10 py-10">
-            <article class="space-y-10">
-                <h1
-                    class="font-bold text-5xl text-gray-800 tracking-wide uppercase text-pretty"
-                >
-                    Mandos principales - Alarmas - Subevidrios Electricos -
-                    Piñones - Motores Subevidrios - Accesorios
-                </h1>
-                <p class="inline-block text-gray-700 prose-lg prose-invert">
-                    Desde el 2004 la Clínica de Puertas de Carros J&G brinda
-                    servicios de reparación, mantenimiento e instalación de sube
-                    vidrios eléctricos y manuales, además motores elevavidrios
-                    originales y alternos con certificación de alta calidad
-                    seguros eléctricos en marca Némesis y Falcon alarmas de
-                    diferentes marcas, piñones, abrepuertas, chapas, mandos
-                    principales, botones individuales, switches universales y
-                    originales en todas las marcas de vehículos.
-                </p>
-                <a
-                    class="bg-primary font-bold inline-block px-10 py-4 text-base rounded-xl text-white"
-                    href="/#">Ver Productos</a
-                >
-            </article>
-            <article>
-                <Collection />
-            </article>
-        </section>
+    <main>
+        <SectionContainer class="grid grid-cols-2 gap-10 py-10">
+            <Hero />
+        </SectionContainer>
     </main>
 </Layout>
